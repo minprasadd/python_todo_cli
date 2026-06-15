@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """
 A command-line To-Do app with JSON file storage.
 Features: add, list, done, delete, clear-done, priority, due date, edit
@@ -15,8 +14,6 @@ TODO_FILE = "todos.json"
 PRIORITIES = {"high": "🔴", "medium": "🟡", "low": "🟢"}
 PRIORITY_ORDER = {"high": 1, "medium": 2, "low": 3}
 
-
-# ── Data helpers ──────────────────────────────────────────────────────────────
 
 def load_todos():
     if not os.path.exists(TODO_FILE):
@@ -79,8 +76,6 @@ def format_due(due_str):
     else:
         return f" \033[2m[Due: {due_str}]\033[0m"
 
-
-# ── Commands ──────────────────────────────────────────────────────────────────
 
 def add_task(args):
     """Add a new task. Args include title words and optional --priority / --due flags."""
